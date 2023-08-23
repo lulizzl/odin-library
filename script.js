@@ -104,6 +104,8 @@ bookForm.querySelector("button.submit").addEventListener("click", function(event
     let newPages = document.getElementById('pages')
     let checkbox = document.getElementById('read')
     newRead = checkbox.checked
+    if (newRead === true) newRead = 'read'
+    if (newRead === false) newRead = 'not read'
     newBook = new Book(newTitle.value, newAuthor.value, newPages.value, newRead)
     addBookToLibrary(newBook)
     displayBook(newBook)
